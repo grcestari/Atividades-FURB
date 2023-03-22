@@ -8,16 +8,16 @@ public class ex4 {
         Scanner teclado = new Scanner(System.in);
         DecimalFormat df_1 = new DecimalFormat("0.0");
 
-        System.out.println("Informe a nota1");
+        System.out.print("Informe a nota1");
         double nota1 = teclado.nextDouble();
         while (nota1 < 0 || nota1 > 10) {
-            System.out.println("Nota 1 deve ser um numero entre 0 e 10.");
+            System.out.print("Nota 1 deve ser um numero entre 0 e 10.");
             nota1 = teclado.nextDouble();
         }
-        System.out.println("Informe a nota2");
+        System.out.print("Informe a nota2");
         double nota2 = teclado.nextDouble();
         while (nota2 < 0 || nota2 > 10) {
-            System.out.println("Nota 2 deve ser um numero entre 0 e 10.");
+            System.out.print("Nota 2 deve ser um numero entre 0 e 10.");
             nota2 = teclado.nextDouble();
         }
 
