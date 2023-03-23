@@ -9,7 +9,7 @@ public class ex10 {
         DecimalFormat df_2 = new DecimalFormat("0.00");
 
         // ENTRADA
-        System.out.print("Insira o catero 1.");
+        System.out.print("Insira o cateto 1.");
         double cat1 = teclado.nextDouble();
         System.out.print("Insira o cateto 2.");
         double cat2 = teclado.nextDouble();
