@@ -9,13 +9,13 @@ public class ex5 {
         DecimalFormat df_2 = new DecimalFormat("0.00");
 
         // ENTRADA
-        System.out.print("Insira a quantidade de Eduardos.");
-        int eduardos = teclado.nextInt();
+        System.out.print("Insira a quantidade de frangos.");
+        int frango = teclado.nextInt();
 
         // PROCESSO
 
-        double anelId = eduardos * 4;
-        double anelAl = eduardos * 3.5;
+        double anelId = frango * 4;
+        double anelAl = frango * 3.5;
         double gasto = anelId + anelAl;
 
         // SAIDA
