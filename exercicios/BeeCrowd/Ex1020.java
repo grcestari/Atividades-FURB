@@ -17,5 +17,5 @@ public class Ex1020 {
         System.out.println(mes + " mes(es)");
         System.out.println(dia + " dia(s)");
         teclado.close();
-        }
+    }
 }
