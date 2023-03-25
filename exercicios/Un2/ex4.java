@@ -23,7 +23,7 @@ public class ex4 {
 
         double media = ((nota1 * 3.5) + (nota2 * 7.5)) / 11;
 
-        System.out.println("A media poderada e " + df_1.format(media));
+        System.out.println("A media ponderada e " + df_1.format(media));
         teclado.close();
     }
 }

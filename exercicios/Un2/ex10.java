@@ -13,7 +13,7 @@ public class ex10 {
         int resHrs = ent % 3600;
         int min = resHrs / 60;
         int seg = resHrs % 60;
-        
+
         System.out.println(hrs + ":" + min + ":" + seg);
         teclado.close();
     }

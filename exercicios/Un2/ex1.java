@@ -13,7 +13,7 @@ public class ex1 {
 
         int soma = valor1 + valor2;
 
-        System.out.println("A soma de Valor1 e Valor2 eh " + soma);
+        System.out.println("A soma de Valor1 e Valor2 e " + soma);
         teclado.close();
     }
 }
