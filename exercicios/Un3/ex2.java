@@ -17,8 +17,8 @@ public class ex2 {
         double valorF = valorI - desconto;
 
         // SAIDA
-        System.out.println("Voce rescebeu um total de R$" + df_2.format(desconto)
-                + " de desconto, o novo valor dos sapatos e " + df_2.format(valorF));
+        System.out.println("O valor do desconto e de R$" + df_2.format(desconto));
+        System.out.println("O preço do par de sapatos com desconto é R$ " + df_2.format(valorF));
         teclado.close();
     }
 }

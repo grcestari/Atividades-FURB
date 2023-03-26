@@ -24,8 +24,9 @@ public class ex12 {
         double salLiq = salBrt - inss - impDeRnd;
 
         // SAIDA
-        System.out.println("Funcionario: " + nome + ". Salario bruto = R$" + df_2.format(salBrt)
-                + ". Salario liquido = R$" + df_2.format(salLiq) + ".");
+        System.out.println("Funcionario: " + nome);
+        System.out.println("Salario bruto = R$" + df_2.format(salBrt));
+        System.out.println("Salario liquido = R$" + df_2.format(salLiq));
         teclado.close();
     }
 }
