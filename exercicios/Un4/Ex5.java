@@ -8,10 +8,8 @@ public class Ex5 {
 
         System.out.print("A cor é azul? ");
         String resp = kbrd.next();
-
-        String True = "sim";
         
-        boolean h = resp.equals(True);
+        boolean h = resp.equals("sim");
 
         if (h == true) {
             System.out.println("Sim");
