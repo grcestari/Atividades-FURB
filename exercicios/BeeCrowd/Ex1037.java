@@ -20,10 +20,7 @@ public class Ex1037 {
         if (vlr > 75 && vlr <= 100) {
             System.out.println("Intervalo (75,100]");
         }
-        if (vlr < 0) {
-            System.out.println("Fora de intervalo");
-        }
-        if (vlr > 100) {
+        if (vlr < 0 || vlr > 100) {
             System.out.println("Fora de intervalo");
         }
         
