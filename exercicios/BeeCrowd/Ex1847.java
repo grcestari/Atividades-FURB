@@ -15,19 +15,19 @@ public class Ex1847 {
         int deltaD1e2 = tempD2 - tempD1;
         int deltaD2e3 = tempD3 - tempD2;
 
-        String resp = "";
-        if ((tempD1 > tempD2 && tempD2 <= tempD3) || (tempD1 < tempD2 && tempD2 < tempD3 && deltaD2e3 > deltaD1e2)
-        || (tempD1 > tempD2 && tempD2 > tempD3 && deltaD2e3 > deltaD1e2)
-        || (tempD1 == tempD2 && tempD3 > tempD2)) {
-            resp = ":)";
-        }
-        if ((tempD1 < tempD2 && tempD2 >= tempD3) || (tempD1 < tempD2 && tempD2 < tempD3 && deltaD2e3 < deltaD1e2)
-                || (tempD1 > tempD2 && tempD2 > tempD3 && deltaD2e3 < deltaD1e2)
-                || (tempD1 == tempD2 && tempD3 < tempD2)) {
-            resp = ":(";
+        if (tempD1 >= -100 && tempD1 <= 100 && tempD2 >= -100 && tempD2 <= 100 && tempD3 >= -100 && tempD3 <= 100) {
+            if ((tempD1 > tempD2 && tempD2 <= tempD3) || (tempD1 < tempD2 && tempD2 < tempD3 && deltaD2e3 > deltaD1e2)
+                    || (tempD1 > tempD2 && tempD2 > tempD3 && deltaD2e3 > deltaD1e2)
+                    || (tempD1 == tempD2 && tempD3 > tempD2)) {
+                System.out.println(":)");
+            }
+            if ((tempD1 < tempD2 && tempD2 >= tempD3) || (tempD1 < tempD2 && tempD2 < tempD3 && deltaD2e3 < deltaD1e2)
+                    || (tempD1 > tempD2 && tempD2 > tempD3 && deltaD2e3 < deltaD1e2)
+                    || (tempD1 == tempD2 && tempD3 < tempD2)) {
+                System.out.println(":(");
+            }
         }
 
-        System.out.println(resp);
         kbrd.close();
     }
 }
