@@ -8,10 +8,10 @@ public class Ex2 {
 
         int sumP = 0, sumI = 0;
 
-        for (int i = 0; i <= 100; i = i + 2) {
+        for (int i = 0; i <= 100; i += 2) {
             sumP = sumP + i;
         }
-        for (int i = 1; i <= 100; i = i + 2) {
+        for (int i = 1; i <= 100; i += 2) {
             sumI = sumI + i;
         }
 
