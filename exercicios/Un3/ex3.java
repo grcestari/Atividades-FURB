@@ -1,4 +1,4 @@
-package exercicios.Un3;
+package Un3;
 
 import java.util.Scanner;
 import java.text.DecimalFormat;

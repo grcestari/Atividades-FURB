@@ -1,4 +1,4 @@
-package exercicios.BeeCrowd;
+package BeeCrowd;
 
 import java.util.Scanner;
 import java.text.DecimalFormat;

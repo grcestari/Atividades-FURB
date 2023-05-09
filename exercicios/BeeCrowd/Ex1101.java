@@ -1,4 +1,4 @@
-package exercicios.BeeCrowd;
+package BeeCrowd;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class Ex1101 {
             }
             System.out.print(C + "Sum=" + soma + '\n');
 
-            if (M ==0 || N == 0) {
+            if (M == 0 || N == 0) {
                 break;
             }
             M = kbrd.nextInt();

@@ -1,4 +1,4 @@
-package exercicios.BeeCrowd;
+package BeeCrowd;
 
 import java.io.IOException;
 import java.util.Scanner;

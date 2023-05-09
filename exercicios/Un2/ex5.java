@@ -1,4 +1,4 @@
-package exercicios.Un2;
+package Un2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package exercicios.Revisao;
+package Revisao;
 
 import java.util.Scanner;
 

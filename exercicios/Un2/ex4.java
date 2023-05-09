@@ -1,4 +1,4 @@
-package exercicios.Un2;
+package Un2;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
