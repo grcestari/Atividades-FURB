@@ -7,9 +7,16 @@ public class Ex4 {
         Scanner kbrd = new Scanner(System.in);
 
         double sum = 0;
+        double j = 0, h = 0, k = 0;
+        
+        for (int i = 0; i <= 19; i++) {
+            j = 3 + (2 * i);
 
-        for (int i = 3; i <= 41; i= i + 2) {
-            sum = sum + i;
+            h = (i * 2);
+            k = k + (2 + h);
+            
+            sum += (j / k);
+
         }
 
         System.out.println("Soma: " + sum);
