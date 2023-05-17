@@ -1,4 +1,4 @@
-package Un5;
+/*package Un5;
 
 import java.util.Scanner;
 
@@ -38,3 +38,4 @@ public class Ex13 {
        
     }
 }
+*/
