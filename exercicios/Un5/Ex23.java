@@ -12,7 +12,7 @@ public class Ex23 {
         int n = 0;
         double valU = 0, sal = 0, salF = 0, ttlV = 0;
 
-        while (resp != "N") {
+        while (!resp.equals("N")) {
 
             System.out.print("Insira o nome do funcionario: ");
             nome = kbrd.next();

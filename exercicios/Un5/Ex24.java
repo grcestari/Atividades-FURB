@@ -12,7 +12,7 @@ public class Ex24 {
         System.out.print("Insira o limite de peso em Kg: ");
         lmt = kbrd.nextDouble();
 
-        while (pT <= lmt) {
+        while (pT < lmt) {
 
             System.out.print("Insira o peso do peixe em gramas: ");
             pxe = kbrd.nextDouble();
@@ -23,8 +23,12 @@ public class Ex24 {
             System.out.print("Deseja informar o peso de mais um peixe: s (SIM) / n (NÃO)? ");
             resp = kbrd.next();
 
-            if (resp == ver) {
+            if (resp.equals(ver)) {
                 break;
+            }
+
+            if (pT>=lmt) {
+                System.out.println("Limite atingido!");
             }
         }
 
