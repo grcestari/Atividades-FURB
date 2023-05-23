@@ -9,10 +9,11 @@ public class Ex15 {
         String nome = "";
         double nota1 = 0, nota2 = 0, media = 0;
 
-        while (nome != "fim") {
+        while (!nome.equals("fim")) {
 
             nome = kbrd.next();
-            if (nome == "fim") {
+            
+            if (nome.equals("fim")) {
                 break;
             }
 
