@@ -11,7 +11,7 @@ public class Ex22 {
 
         while (ano <= 1996) {
 
-            sal = sal * prcnt;
+            sal += sal * prcnt;
             ano++;
 
         }
