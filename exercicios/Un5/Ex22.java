@@ -9,16 +9,11 @@ public class Ex22 {
         int ano = 1995;
         double sal = 2000, prcnt = 1.5;
 
-        while (ano <= 1996) {
+    
+        while (ano < 2023) {
 
-            sal += sal * prcnt;
-            ano++;
-
-        }
-
-        while (ano <= 2023) {
-
-            sal *= 2;
+            sal = sal + (sal * prcnt / 100);
+            prcnt *= 2;
             ano++;
 
         }
