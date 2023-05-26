@@ -19,7 +19,7 @@ public class Ex20 {
         if (mF > 0.0005) {
             while (mF >= 0.0005) {
 
-                mF = mF / 2;
+                mF /= 2;
                 tm += 50;
 
             }
