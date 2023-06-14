@@ -6,9 +6,10 @@ public class Q1 {
     public static void main(String[] args) {
         Scanner kbrd = new Scanner(System.in);
 
-        String nome = kbrd.next();
+        String nome = kbrd.nextLine();
 
-        if (nome == "") {
+        //if (nome == "") {
+            if (nome.isEmpty()) {
             System.out.println("Dados invalidos");
             } else {
                 int anoNascimento = kbrd.nextInt();
