@@ -32,7 +32,7 @@ public class Liga_4 {
     public static void printTabuleiro(char[][] tabuleiro) {
         for (int i = 0; i < 6; i++) {
             for (int h = 0; h < 7; h++) {
-                System.out.print(tabuleiro[i][h]);
+                System.out.print(tabuleiro[i][h] + " ");
 
             }
 
@@ -56,14 +56,76 @@ public class Liga_4 {
 
     }
 
-    public static int metodoJogador(Scanner teclado, int rodada) {
+    public static int metodoJogador(Scanner teclado, char[][] tabuleiro, int[] colunas, int rodada, char corP) {
+
+        boolean saida = false;
+
+        while (saida == false) {
+            System.out.print("Escolha a coluna. (0 -> imprimir o tabuleiro) ");
+            int coluna = teclado.nextInt();
+
+            while (coluna == 0) {
+                printTabuleiro(null);
+                System.out.print("Escolha a coluna. (0 -> imprimir o tabuleiro) ");
+                coluna = teclado.nextInt();
+
+            }
+
+            if (colunas[(coluna - 1)] < 7) {
+                colunas[(coluna - 1)]++;
+
+                for (int i = 5; i >= 0; i--) {
+                    if (tabuleiro[i][coluna - 1] == 'B') {
+                        tabuleiro[i][coluna - 1] = corP;
+                        break;
+                    }
+                }
+            }
+
+            if (saida == false) {
+                System.out.println("Coluna cheia\nEscolha outra coluna.");
+
+            }
+        }
+
+        rodada++;
 
         return rodada;
+    }
+
+    public static int metodoPC(char[][] tabuleiro, int[] colunas, int rodada, char corC) {
+
+        boolean repetir;
+
+        do {
+            repetir = false;
+            int coluna = (int) (Math.random() * 6) + 1;
+
+            if (colunas[(coluna - 1)] < 7) {
+                colunas[(coluna - 1)]++;
+
+                for (int i = 5; i >= 0; i--) {
+                    if (tabuleiro[i][coluna - 1] == 'B') {
+                        tabuleiro[i][coluna - 1] = corC;
+                        break;
+                    }
+                }
+            } else {
+                repetir = true;
+            }
+
+        } while (repetir == true);
+
+        rodada++;
+
+        return rodada;
+
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         char[][] tabuleiro = new char[6][7];
+        int[] colunas = { 0, 0, 0, 0, 0, 0, 0 };
 
         preencher(tabuleiro);
 
@@ -77,8 +139,6 @@ public class Liga_4 {
             corC = 'V';
         }
 
-        System.out.println("Digite (0) se quiser ver o tabuleiro.");
-
         int start;
         start = qmComeca();
 
@@ -88,10 +148,11 @@ public class Liga_4 {
 
         while (rodada < 42 && vitoria == false) {
             if (vezJogador == 0) {
-                rodada = metodoJogador(rodada);
+                System.out.println("Digite (0) se quiser ver o tabuleiro.");
+                rodada = metodoJogador(teclado, tabuleiro, colunas, rodada, corP);
                 vezJogador = 1;
             } else {
-                rodada = metodoPC(rodada);
+                rodada = metodoPC(tabuleiro, colunas, rodada, corC);
                 vezJogador = 0;
             }
 
