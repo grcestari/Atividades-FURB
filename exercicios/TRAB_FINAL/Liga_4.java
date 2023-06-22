@@ -8,13 +8,18 @@ public class Liga_4 {
         for (int i = 0; i < 6; i++) {
             for (int h = 0; h < 7; h++) {
                 tabuleiro[i][h] = 'B';
+
             }
+
         }
+
     }
 
     public static char cores(Scanner teclado) {
         System.out.println("Escolha sua cor!\nV - Vermelho    A - Azul");
+
         char corP;
+
         do {
             corP = teclado.next().toUpperCase().charAt(0);
 
@@ -38,15 +43,18 @@ public class Liga_4 {
 
             System.out.println();
         }
+
     }
 
     public static int qmComeca() {
+
         double chance = Math.random();
 
         int start;
         if (chance < 0.5) {
             start = 0;
             System.out.println("O jogador comeca.");
+
         } else {
             start = 1;
             System.out.println("O computador comeca.");
@@ -78,14 +86,18 @@ public class Liga_4 {
                     if (tabuleiro[i][coluna - 1] == 'B') {
                         tabuleiro[i][coluna - 1] = corP;
                         break;
+
                     }
+
                 }
+
             }
 
             if (saida == false) {
                 System.out.println("Coluna cheia\nEscolha outra coluna.");
 
             }
+
         }
 
         rodada++;
@@ -108,10 +120,14 @@ public class Liga_4 {
                     if (tabuleiro[i][coluna - 1] == 'B') {
                         tabuleiro[i][coluna - 1] = corC;
                         break;
+
                     }
+
                 }
+
             } else {
                 repetir = true;
+
             }
 
         } while (repetir == true);
@@ -137,6 +153,7 @@ public class Liga_4 {
 
         } else {
             corC = 'V';
+
         }
 
         int start;
@@ -151,13 +168,16 @@ public class Liga_4 {
                 System.out.println("Digite (0) se quiser ver o tabuleiro.");
                 rodada = metodoJogador(teclado, tabuleiro, colunas, rodada, corP);
                 vezJogador = 1;
+
             } else {
                 rodada = metodoPC(tabuleiro, colunas, rodada, corC);
                 vezJogador = 0;
+
             }
 
         }
 
         teclado.close();
     }
+
 }
