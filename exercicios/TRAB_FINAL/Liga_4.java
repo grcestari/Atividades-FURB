@@ -20,7 +20,7 @@ public class Liga_4 {
         System.out.println("+ 1 2 3 4 5 6 7");
 
         for (int i = 0; i < 6; i++) {
-            System.out.print(i+1 + " ");
+            System.out.print(6 - i + " ");
             for (int h = 0; h < 7; h++) {
                 System.out.print(tabuleiro[i][h] + " ");
 
@@ -97,7 +97,7 @@ public class Liga_4 {
                         System.out.println("ENTRADA INVÁLIDA!\n");
                         System.out.print("Escolha a coluna. (0 -> Imprimir o tabuleiro) ");
                         coluna = teclado.nextInt();
-                     }
+                    }
                 }
 
                 if (colunas[(coluna - 1)] < 7) {
@@ -324,9 +324,9 @@ public class Liga_4 {
 
             System.out.println("\nDeseja jogar novamente? (S - Sim   |   N - Não)");
             jogar = teclado.next().toUpperCase().charAt(0);
-            while (jogar !='S' && jogar!='N'){
-            System.out.println("Inválido. Insira: 'S' - Sim   |   'N' - Não)");
-            jogar = teclado.next().toUpperCase().charAt(0);
+            while (jogar != 'S' && jogar != 'N') {
+                System.out.println("Inválido. Insira: 'S' - Sim   |   'N' - Não)");
+                jogar = teclado.next().toUpperCase().charAt(0);
             }
 
         } while (jogar != 'N');
