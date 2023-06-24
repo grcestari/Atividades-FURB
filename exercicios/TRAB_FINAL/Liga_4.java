@@ -93,7 +93,11 @@ public class Liga_4 {
                     printTabuleiro(tabuleiro);
                     System.out.print("Escolha a coluna. (0 -> Imprimir o tabuleiro) ");
                     coluna = teclado.nextInt();
-
+                    while (coluna < 0 || coluna > 7) {
+                        System.out.println("ENTRADA INVÁLIDA!\n");
+                        System.out.print("Escolha a coluna. (0 -> Imprimir o tabuleiro) ");
+                        coluna = teclado.nextInt();
+                     }
                 }
 
                 if (colunas[(coluna - 1)] < 7) {
@@ -127,7 +131,7 @@ public class Liga_4 {
 
     public static int metodoPC(char[][] tabuleiro, int[] colunas, int rodada, char corC) {
 
-        System.out.println("Vez do Computador.");
+        System.out.println("\nVez do Computador.");
 
         boolean repetir = true;
 
