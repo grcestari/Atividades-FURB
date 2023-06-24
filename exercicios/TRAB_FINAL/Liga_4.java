@@ -42,7 +42,7 @@ public class Liga_4 {
             corP = teclado.next().toUpperCase().charAt(0);
 
             if ((corP != 'V' && corP != 'A')) {
-                System.out.println("ENTRADA INVALIDA!\n");
+                System.out.println("ENTRADA INVÁLIDA!\n");
 
             }
 
@@ -61,11 +61,11 @@ public class Liga_4 {
         int start;
         if (chance < 0.5) {
             start = 0;
-            System.out.println("O jogador comeca.\n");
+            System.out.println("O jogador começa.\n");
 
         } else {
             start = 1;
-            System.out.println("O computador comeca.");
+            System.out.println("O computador começa.");
         }
 
         return start;
@@ -85,7 +85,7 @@ public class Liga_4 {
 
             if (coluna < 0 || coluna > 7) {
 
-                System.out.println("ENTRADA INVALDIA!\n");
+                System.out.println("ENTRADA INVÁLIDA!\n");
 
             } else {
 
@@ -127,7 +127,7 @@ public class Liga_4 {
 
     public static int metodoPC(char[][] tabuleiro, int[] colunas, int rodada, char corC) {
 
-        System.out.println("\nVez do Computador.");
+        System.out.println("Vez do Computador.");
 
         boolean repetir = true;
 
@@ -172,10 +172,11 @@ public class Liga_4 {
                         && tabuleiro[i][h] == tabuleiro[i][h + 2] && tabuleiro[i][h] == tabuleiro[i][h + 3]) {
 
                     if (vezJogador == 0) {
-                        System.out.println("O jogador ganhou!");
+                        printTabuleiro(tabuleiro);
+                        System.out.println("VITÓRIA. O jogador ganhou!");
 
                     } else {
-                        System.out.println("O computador ganhou!");
+                        System.out.println("VITÓRIA. O computador ganhou!");
 
                     }
 
@@ -196,10 +197,11 @@ public class Liga_4 {
                         && tabuleiro[i][h] == tabuleiro[i + 2][h] && tabuleiro[i][h] == tabuleiro[i + 3][h]) {
 
                     if (vezJogador == 0) {
-                        System.out.println("O jogador ganhou!");
+                        printTabuleiro(tabuleiro);
+                        System.out.println("VITÓRIA. O jogador ganhou!");
 
                     } else {
-                        System.out.println("O computador ganhou!");
+                        System.out.println("VITÓRIA. O computador ganhou!");
 
                     }
 
@@ -220,10 +222,11 @@ public class Liga_4 {
                         && tabuleiro[i][h] == tabuleiro[i + 2][h + 2] && tabuleiro[i][h] == tabuleiro[i + 3][h + 3]) {
 
                     if (vezJogador == 0) {
-                        System.out.println("O jogador ganhou!");
+                        printTabuleiro(tabuleiro);
+                        System.out.println("VITÓRIA. O jogador ganhou!");
 
                     } else {
-                        System.out.println("O computador ganhou!");
+                        System.out.println("VITÓRIA. O computador ganhou!");
 
                     }
 
@@ -245,10 +248,11 @@ public class Liga_4 {
                         && tabuleiro[i][h + 3] == tabuleiro[i + 3][h]) {
 
                     if (vezJogador == 0) {
-                        System.out.println("O jogador ganhou!");
+                        printTabuleiro(tabuleiro);
+                        System.out.println("VITÓRIA. O jogador ganhou!");
 
                     } else {
-                        System.out.println("O computador ganhou!");
+                        System.out.println("VITÓRIA. O computador ganhou!");
 
                     }
 
@@ -310,11 +314,16 @@ public class Liga_4 {
             }
 
             if (vitoria == false) {
-                System.out.println("EMPATE");
+                printTabuleiro(tabuleiro);
+                System.out.println("EMPATE.");
             }
 
-            System.out.println("\nDeseja jogar novamente? (S - Sim   |   N - NAO)");
+            System.out.println("\nDeseja jogar novamente? (S - Sim   |   N - Não)");
             jogar = teclado.next().toUpperCase().charAt(0);
+            while (jogar !='S' && jogar!='N'){
+            System.out.println("Inválido. Insira: 'S' - Sim   |   'N' - Não)");
+            jogar = teclado.next().toUpperCase().charAt(0);
+            }
 
         } while (jogar != 'N');
 
