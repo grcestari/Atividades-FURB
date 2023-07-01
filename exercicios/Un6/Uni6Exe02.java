@@ -1,5 +1,3 @@
-package Un6;
-
 import java.util.Scanner;
 
 public class Uni6Exe02 {
